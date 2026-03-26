@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_arm_three">
+  <xacro:arg name="prefix" default="" />
+  <xacro:arg name="use_gazebo" default="false" />
+
+  <xacro:include filename="$(find robot_arm_three)/urdf/robot_arm_three.urdf.xacro" />
+
+  <xacro:include filename="$(find robot_arm_three)/ros2_control/robot_arm_three.ros2_control.xacro" />
+
+
+
+  <xacro:robot_arm_three_ros2_control
+    name="robot_arm_three" prefix="$(arg prefix)" use_gazebo="$(arg use_gazebo)"/>
+
+  <xacro:if value="$(arg use_gazebo)">
+    <!-- Import Gazebo Classic definitions + plugin -->
+    <xacro:include filename="$(find robot_arm_three)/gazebo/robot_arm_three.gazebo.xacro" />
+    <xacro:robot_arm_three_gazebo prefix="$(arg prefix)"/>
+  </xacro:if>
+</robot>

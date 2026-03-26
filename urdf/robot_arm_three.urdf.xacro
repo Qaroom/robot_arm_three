@@ -29,7 +29,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/base_link.STL" />
+          filename="package://robot_arm_three/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -43,7 +43,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/base_link.STL" />
+          filename="package://robot_arm_three/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -69,7 +69,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Moving_base_Link.STL" />
+          filename="package://robot_arm_three/meshes/Moving_base_Link.STL" />
       </geometry>
       <material
         name="">
@@ -83,7 +83,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Moving_base_Link.STL" />
+          filename="package://robot_arm_three/meshes/Moving_base_Link.STL" />
       </geometry>
     </collision>
   </link>
@@ -122,7 +122,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/First_axis_link.STL" />
       </geometry>
       <material
         name="">
@@ -136,7 +136,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/First_axis_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -188,7 +188,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_Mil_link.STL" />
+          filename="package://robot_arm_three/meshes/First_Mil_link.STL" />
       </geometry>
       <material
         name="">
@@ -202,7 +202,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_Mil_link.STL" />
+          filename="package://robot_arm_three/meshes/First_Mil_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -241,7 +241,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_fixing_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Second_fixing_axis_link.STL" />
       </geometry>
       <material
         name="">
@@ -255,7 +255,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_fixing_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Second_fixing_axis_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -294,7 +294,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Second_axis_link.STL" />
       </geometry>
       <material
         name="">
@@ -308,7 +308,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Second_axis_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -360,7 +360,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_mil_link.STL" />
+          filename="package://robot_arm_three/meshes/Second_mil_link.STL" />
       </geometry>
       <material
         name="">
@@ -374,7 +374,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_mil_link.STL" />
+          filename="package://robot_arm_three/meshes/Second_mil_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -413,7 +413,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_fixing_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Third_fixing_axis_link.STL" />
       </geometry>
       <material
         name="">
@@ -427,7 +427,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_fixing_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Third_fixing_axis_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -466,7 +466,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Third_axis_link.STL" />
       </geometry>
       <material
         name="">
@@ -480,7 +480,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_axis_link.STL" />
+          filename="package://robot_arm_three/meshes/Third_axis_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -532,7 +532,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/camera_link.STL" />
+          filename="package://robot_arm_three/meshes/camera_link.STL" />
       </geometry>
       <material
         name="">
@@ -546,7 +546,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/camera_link.STL" />
+          filename="package://robot_arm_three/meshes/camera_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -623,7 +623,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/gripper_base_link.STL" />
+          filename="package://robot_arm_three/meshes/gripper_base_link.STL" />
       </geometry>
       <material
         name="">
@@ -637,7 +637,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/gripper_base_link.STL" />
+          filename="package://robot_arm_three/meshes/gripper_base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -678,7 +678,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/right_gripper_hand_link.STL" />
+          filename="package://robot_arm_three/meshes/right_gripper_hand_link.STL" />
       </geometry>
       <material
         name="">
@@ -692,7 +692,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/right_gripper_hand_link.STL" />
+          filename="package://robot_arm_three/meshes/right_gripper_hand_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -741,7 +741,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/left_gripper_hand_link.STL" />
+          filename="package://robot_arm_three/meshes/left_gripper_hand_link.STL" />
       </geometry>
       <material
         name="">
@@ -755,7 +755,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/left_gripper_hand_link.STL" />
+          filename="package://robot_arm_three/meshes/left_gripper_hand_link.STL" />
       </geometry>
     </collision>
   </link>

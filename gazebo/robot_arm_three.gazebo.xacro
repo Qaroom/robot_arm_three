@@ -1,16 +1,12 @@
 <?xml version="1.0"?>
-<!--
-Copied and modified from ROS1 example -
-https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_description/urdf/rrbot.gazebo
--->
+
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="rrbot_gazebo" params="prefix">
+  <xacro:macro name="robot_arm_three_gazebo" params="prefix">
 
     <!-- ros_control plugin -->
     <gazebo>
       <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-        <!-- <parameters>$(find system_hss)/config/ros2_controllers_with_trajctory.yaml</parameters> -->
         <parameters>$(find robot_arm_three)/config/ros2_controllers.yaml</parameters>
         <control_period>0.001</control_period> 
       </plugin>

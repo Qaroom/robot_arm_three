@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="rrbot_ros2_control" params="name prefix use_gazebo:=^|false">
+  <xacro:macro name="robot_arm_three_ros2_control" params="name prefix use_gazebo:=^|false">
 
     <ros2_control name="${name}" type="system">
   <hardware>
@@ -11,15 +11,12 @@
   </hardware>
 
   <joint name="First_axis_joint">
-    <!-- State (okuma) -->
     <state_interface name="position"/>
     <state_interface name="velocity">
       <param name="initial_value">0.0</param>
     </state_interface>
     <command_interface name="velocity"/>
 
-    <!-- Command (yazma) - SADECE position -->
-    <!-- <command_interface name="position"/> -->
   </joint>
 
   <joint name="Second_axis_joint">
