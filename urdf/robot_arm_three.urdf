@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_arm_three">
+ <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.45153 -0.15 0.25"
+        rpy="0 0 0" />
+      <mass
+        value="500" />
+      <inertia
+        ixx="3.8205"
+        ixy="1.1749E-16"
+        ixz="-4.326E-14"
+        iyy="11.852"
+        iyz="-6.4283E-15"
+        izz="10.048" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </collision>
+  </link>
+  <link
+    name="Moving_base_Link">
+    <inertial>
+      <origin
+        xyz="-7.4784E-11 2.488E-09 -0.030092"
+        rpy="0 0 0" />
+      <mass
+        value="0.41044" />
+      <inertia
+        ixx="0.00049787"
+        ixy="8.1471E-14"
+        ixz="-5.1495E-13"
+        iyy="0.00059376"
+        iyz="2.0784E-12"
+        izz="0.00032503" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Moving_base_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Moving_base_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_joint"
+    type="fixed">
+    <origin
+      xyz="0.1 -0.315 0.25"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Moving_base_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="First_axis_link">
+    <inertial>
+      <origin
+        xyz="0.00020443 -0.016953 0.042441"
+        rpy="0 0 0" />
+      <mass
+        value="0.2878" />
+      <inertia
+        ixx="0.00047468"
+        ixy="2.6726E-07"
+        ixz="6.9283E-07"
+        iyy="0.00028851"
+        iyz="2.1973E-05"
+        izz="0.0007004" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_axis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_axis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="First_axis_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.05 -0.07"
+      rpy="0 0 0" />
+    <parent
+      link="Moving_base_Link" />
+    <child
+      link="First_axis_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="7" />
+    <dynamics
+      damping="0.05"
+      friction="0.05" />
+    <safety_controller
+      soft_upper_limit="-0.1"
+      soft_lower_limit="0.1"
+      k_position="50"
+      k_velocity="50" />
+  </joint>
+  <link
+    name="First_Mil_link">
+    <inertial>
+      <origin
+        xyz="0 6.9389E-18 0.1"
+        rpy="0 0 0" />
+      <mass
+        value="0.14137" />
+      <inertia
+        ixx="0.00047919"
+        ixy="6.365E-22"
+        ixz="-3.3602E-20"
+        iyy="0.00047919"
+        iyz="4.9964E-21"
+        izz="1.5904E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_Mil_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/First_Mil_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="First_Mil_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00020649 -0.065626 0.041309"
+      rpy="1.5709 0 -0.00032045" />
+    <parent
+      link="First_axis_link" />
+    <child
+      link="First_Mil_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Second_fixing_axis_link">
+    <inertial>
+      <origin
+        xyz="0.00045772 -0.0011495 0.048671"
+        rpy="0 0 0" />
+      <mass
+        value="0.2878" />
+      <inertia
+        ixx="0.00047467"
+        ixy="3.0307E-07"
+        ixz="7.1506E-08"
+        iyy="0.0007004"
+        iyz="-2.1995E-05"
+        izz="0.00028851" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_fixing_axis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_fixing_axis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="First_mil_second_fixing_axis_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.2"
+      rpy="0 0 0" />
+    <parent
+      link="First_Mil_link" />
+    <child
+      link="Second_fixing_axis_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Second_axis_link">
+    <inertial>
+      <origin
+        xyz="0.0058045 -0.034292 0.02648"
+        rpy="0 0 0" />
+      <mass
+        value="0.63376" />
+      <inertia
+        ixx="0.0012314"
+        ixy="-0.00012396"
+        ixz="1.0726E-05"
+        iyy="0.0010088"
+        iyz="-0.0001858"
+        izz="0.0017832" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_axis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_axis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Second_axis_joint"
+    type="revolute">
+    <origin
+      xyz="0.0004575 -0.043784 0.065618"
+      rpy="-1.5708 0.00032045 0" />
+    <parent
+      link="Second_fixing_axis_link" />
+    <child
+      link="Second_axis_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-4.65"
+      upper="1.5"
+      effort="200"
+      velocity="7" />
+    <dynamics
+      damping="0.05"
+      friction="0.05" />
+    <safety_controller
+      soft_upper_limit="-0.1"
+      soft_lower_limit="0.1"
+      k_position="50"
+      k_velocity="50" />
+  </joint>
+  <link
+    name="Second_mil_link">
+    <inertial>
+      <origin
+        xyz="-0.0083972 0.0054255 0.11033"
+        rpy="0 0 0" />
+      <mass
+        value="0.14137" />
+      <inertia
+        ixx="0.00047919"
+        ixy="1.2794E-21"
+        ixz="7.0399E-20"
+        iyy="0.00047919"
+        iyz="-2.9758E-20"
+        izz="1.5904E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_mil_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Second_mil_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Second_mil_joint"
+    type="fixed">
+    <origin
+      xyz="0.049694 0.0055217 -0.0066038"
+      rpy="1.5708 -1.5707 1.5708" />
+    <parent
+      link="Second_axis_link" />
+    <child
+      link="Second_mil_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Third_fixing_axis_link">
+    <inertial>
+      <origin
+        xyz="-0.00047757 6.3774E-05 0.02611"
+        rpy="0 0 0" />
+      <mass
+        value="0.13374" />
+      <inertia
+        ixx="0.00017544"
+        ixy="4.9987E-10"
+        ixz="-7.574E-06"
+        iyy="0.00012399"
+        iyz="4.6365E-09"
+        izz="8.8845E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_fixing_axis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.62745 0.62745 0.62745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_fixing_axis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="second_mil_third_fixing_axis_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0083972 0.0054255 0.21033"
+      rpy="0 0 0" />
+    <parent
+      link="Second_mil_link" />
+    <child
+      link="Third_fixing_axis_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Third_axis_link">
+    <inertial>
+      <origin
+        xyz="1.2302E-06 0.0046698 0.013516"
+        rpy="0 0 0" />
+      <mass
+        value="0.053567" />
+      <inertia
+        ixx="2.4098E-05"
+        ixy="-1.5016E-09"
+        ixz="-3.5463E-08"
+        iyy="2.8157E-05"
+        iyz="-1.2699E-06"
+        izz="4.8213E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_axis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/Third_axis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Third_axis_joint"
+    type="revolute">
+    <origin
+      xyz="0.02 0.00062296 0.04"
+      rpy="3.14 -1.5708 0" />
+    <parent
+      link="Third_fixing_axis_link" />
+    <child
+      link="Third_axis_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="200"
+      velocity="7" />
+    <dynamics
+      damping="0.05"
+      friction="0.05" />
+    <safety_controller
+      soft_upper_limit="-0.1"
+      soft_lower_limit="0.1"
+      k_position="50"
+      k_velocity="50" />
+  </joint>
+<link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="0.00742671528155842 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00669817477042468" />
+      <inertia
+        ixx="2.24650679615758E-06"
+        ixy="-2.85635805272217E-23"
+        ixz="-3.36613657076379E-22"
+        iyy="1.99652632455908E-06"
+        iyz="3.23338469113802E-17"
+        izz="2.8272632455908E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0331562787109546 0.0434999999999439"
+      rpy="1.57079632677603 0 -1.5707963267949" />
+    <parent
+      link="Third_axis_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+<link name="base_lift_link"/>
+<joint name="base_lift_joint" type="fixed">
+    <parent link="base_lift_link"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="-1.57 0 0"/>
+  </joint>
+<!-- ///////////////////////// gazebo  parameters////////////////////////////-->
+
+    <gazebo reference="camera_link">
+        <sensor name="camera" type="camera">
+         <pose>0 0 0 0 0 -3.14</pose> <!-- roll pitch yaw -->
+            <always_on>true</always_on>
+            <update_rate>60</update_rate>        <!-- FPS -->
+            <visualize>true</visualize>
+            <camera>
+            <horizontal_fov>1.047</horizontal_fov> <!-- 60 derece -->
+            <image>
+                <width>640</width>
+                <height>480</height>
+                <format>R8G8B8</format>
+            </image>
+            <clip>
+                <near>0.1</near>
+                <far>100</far>
+            </clip>
+            </camera>
+            <plugin filename="gz-sim-sensors-system"
+            name="gz::sim::systems::Sensors"/>
+           
+            <topic>camera/image</topic> <!-- Gazebo topic -->
+        </sensor>
+    </gazebo>
+
+
+
+
+<link
+    name="gripper_base_link">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 0.00507773909729814 -3.00330654887104E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00737896174553321" />
+      <inertia
+        ixx="2.93127171204422E-07"
+        ixy="-1.35475293940183E-21"
+        ixz="7.18304419805119E-22"
+        iyy="2.46379796999463E-06"
+        iyz="-1.43231223323957E-11"
+        izz="2.22163461829653E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/gripper_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/gripper_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0395 0.019"
+      rpy="5.9147E-05 0 3.1416" />
+    <parent
+      link="Third_axis_link" />
+    <child
+      link="gripper_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <link
+    name="right_gripper_hand_link">
+    <inertial>
+      <origin
+        xyz="-0.020998 -0.0078593 4.6485E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0055154" />
+      <inertia
+        ixx="4.5417E-07"
+        ixy="6.7061E-08"
+        ixz="-3.9665E-12"
+        iyy="2.8042E-07"
+        iyz="4.4337E-12"
+        izz="3.5538E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/right_gripper_hand_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/right_gripper_hand_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper_hand_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_base_link" />
+    <child
+      link="right_gripper_hand_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.035"
+      upper="0.035"
+      effort="200"
+      velocity="2" />
+    <safety_controller
+      soft_upper_limit="-0.005"
+      soft_lower_limit="0.005"
+      k_position="50"
+      k_velocity="50" />
+  </joint>
+  <link
+    name="left_gripper_hand_link">
+    <inertial>
+      <origin
+        xyz="0.020998 -0.0078593 4.6485E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0055154" />
+      <inertia
+        ixx="4.5417E-07"
+        ixy="-6.7061E-08"
+        ixz="3.9665E-12"
+        iyy="2.8042E-07"
+        iyz="4.4337E-12"
+        izz="3.5538E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/left_gripper_hand_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ros2/Desktop/ros_ws/src/robot_arm_three/meshes/left_gripper_hand_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper_hand_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="gripper_base_link" />
+    <child
+      link="left_gripper_hand_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.035"
+      upper="0.035"
+      effort="200"
+      velocity="2" />
+    <safety_controller
+      soft_upper_limit="-0.005"
+      soft_lower_limit="0.005"
+      k_position="50"
+      k_velocity="50" />
+  </joint>
+
+
+</robot>
